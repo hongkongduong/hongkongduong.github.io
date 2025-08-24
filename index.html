@@ -1,11 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Trà thảo mộc An Nhiên - Thaomocan.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trà thảo mộc An Nhiên – Thaomocan.com</title>
+  <meta name="description" content="Trà thảo mộc An Nhiên: thanh lọc – an tâm – an lành. Uống ngon mỗi ngày, hỗ trợ tiêu hoá.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%232f855a'/%3E%3Cpath d='M25 60c18 0 22-15 25-25 4 12 9 25 25 25-10 6-16 12-25 12s-15-6-25-12Z' fill='white'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg:#f6f7f6; --card:#fff; --ink:#111827; --muted:#6b7280;
+      --brand:#2f855a; --brand-2:#166534; --ring:#e5e7eb;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    a{color:inherit}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    /* Header */
+    .topbar{position:sticky;top:0;z-index:30;background:#ffffffc9;backdrop-filter:blur(8px);border-bottom:1px solid var(--ring)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+    .menu a{margin:0 10px;text-decoration:none;color:#111827;font-weight:600}
+    .menu a:hover{color:var(--brand)}
+    .cta{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700}
+    .cta:hover{background:var(--brand-2)}
+    /* Hero */
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+    .pill{display:inline-block;font-size:12px;background:#d1fae5;color:#065f46;border-radius:999px;padding:6px 10px;margin-bottom:10px}
+    h1{font-size:clamp(26px,4.5vw,44px);line-height:1.15;margin:0 0 10px}
+    .lead{font-size:18px;color:var(--muted);margin:0 0 18px}
+    .imgbox{aspect-ratio:4/3;border-radius:18px;border:1px solid var(--ring);
+      background:
+        radial-gradient(1000px 400px at -10% -10%,#ecfdf5 20%,#fff 60%),
+        url('https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;}
+    /* Sections */
+    section{padding:28px 0}
+    h2{font-size:clamp(22px,3.8vw,32px);margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature li{margin:6px 0}
+    .tag{font-size:12px;color:#065f46;background:#ecfdf5;border:1px solid #d1fae5;border-radius:8px;padding:4px 8px;margin-right:6px}
+    /* Pricing */
+    .price{font-size:28px;font-weight:800;color:var(--brand)}
+    /* Testimonials */
+    .quote{font-style:italic;color:#374151}
+    /* FAQ */
+    details{background:var(--card);border:1px solid var(--ring);border-radius:12px;padding:12px 14px;margin:10px 0}
+    summary{font-weight:700;cursor:pointer}
+    /* Footer */
+    footer{padding:26px 0;color:var(--muted);border-top:1px solid var(--ring);margin-top:18px}
+    /* Floating actions */
+    .fab{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px;z-index:40}
+    .fab a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--brand);color:#fff;padding:10px 14px;border-radius:999px;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.15)}
+    .fab a:hover{background:var(--brand-2)}
+    @media(max-width:960px){.hero-grid{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <h1>Xin chào!</h1>
-  <p>Đây là website Trà thảo mộc An Nhiên.</p>
+  <div class="topbar">
+    <div class="container nav">
+      <div class="brand"><div class="logo" aria-hidden="true"></div>Trà thảo mộc <span style="color:var(--brand)">An Nhiên</span></div>
+      <div class="menu">
+        <a href="#san-pham">Sản phẩm</a>
+        <a href="#loi-ich">Lợi ích</a>
+        <a href="#cam-nhan">Cảm nhận</a>
+        <a href="#faq">Hỏi đáp</a>
+        <a class="cta" href="#lien-he">Đặt hàng</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="card">
+        <span class="pill">Thanh lọc • An tâm • An lành</span>
+        <h1>Trà thảo mộc An Nhiên – uống ngon mỗi ngày, hỗ trợ tiêu hoá</h1>
+        <p class="lead">Chọn lọc thảo mộc Việt, hương vị dịu nhẹ. Túi lọc tiện lợi – phù hợp để dùng hằng ngày.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="cta" href="#lien-he">Nhận tư vấn</a>
+          <a class="cta" style="background:#111827" href="tel:0900000000">Gọi 0900 000 000</a>
+        </div>
+        <p style="margin-top:10px;color:var(--muted);font-size:14px">Miễn phí giao hàng nội thành cho đơn từ 2 hộp.</p>
+      </div>
+      <div class="imgbox" role="img" aria-label="Tách trà thảo mộc An Nhiên"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="san-pham">
+      <h2>Sản phẩm & giá</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">Bán chạy</div>
+          <h3>An Nhiên – hộp 60 túi</h3>
+          <p>Ngon dịu, dễ uống. Pha 2 túi/lần với 400–500ml nước nóng.</p>
+          <div class="price">299.000đ</div>
+          <a class="cta" href="#lien-he">Đặt 1 hộp</a>
+        </div>
+        <div class="card">
+          <h3>Combo 2 hộp + bình giữ nhiệt</h3>
+          <p>Tiết kiệm cho người mới bắt đầu. Mang theo dễ dàng.</p>
+          <div class="price">569.000đ</div>
+          <a class="cta" href="#lien-he">Đặt combo</a>
+        </div>
+        <div class="card">
+          <h3>Quà tặng sức khoẻ</h3>
+          <p>Hộp quà trang nhã – tặng người thân, đối tác.</p>
+          <div class="price">Từ 349.000đ</div>
+          <a class="cta" href="#lien-he">Tư vấn gói quà</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="loi-ich">
+      <h2>Lợi ích & điểm nổi bật</h2>
+      <div class="grid">
+        <div class="card feature">
+          <h3>Tốt cho thói quen hằng ngày</h3>
+          <ul>
+            <li>Hương vị dịu, dễ uống</li>
+            <li>Túi lọc sạch – pha nhanh</li>
+            <li>Phù hợp mọi lứa tuổi</li>
+          </ul>
+        </div>
+        <div class="card feature">
+          <h3>Nguyên liệu chọn lọc</h3>
+          <ul>
+            <li>Thảo mộc Việt rõ nguồn gốc</li>
+            <li>Đóng gói tiêu chuẩn vệ sinh</li>
+            <li>Tư vấn cách dùng chi tiết</li>
+          </ul>
+        </div>
+        <div class="card feature">
+          <h3>Cam kết dịch vụ</h3>
+          <ul>
+            <li>Đổi trả trong 7 ngày</li>
+            <li>Giao nhanh nội thành</li>
+            <li>Hỗ trợ sau bán tận tâm</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="cam-nhan">
+      <h2>Khách hàng nói gì?</h2>
+      <div class="grid">
+        <div class="card"><p class="quote">“Pha nhạt vừa phải, thơm dịu. Uống xong bụng nhẹ, ngủ ngon hơn.”</p><strong>– Chị H., Hà Nội</strong></div>
+        <div class="card"><p class="quote">“Mang đi làm rất tiện, mỗi sáng pha 1 bình là dùng cả ngày.”</p><strong>– Anh T., Bắc Ninh</strong></div>
+        <div class="card"><p class="quote">“Đóng gói đẹp, tặng bố mẹ ai cũng thích.”</p><strong>– Bạn M., TP.HCM</strong></div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Hỏi đáp nhanh</h2>
+      <details><summary>Pha thế nào cho ngon?</summary><div>2 túi/lần, 400–500ml nước nóng 90–95°C. Ngâm 5–7 phút. Có thể thêm lát chanh hoặc mật ong.</div></details>
+      <details><summary>Ngày uống bao nhiêu là hợp lý?</summary><div>2 lần/ngày (sáng & chiều). Tăng/giảm theo vị giác cá nhân.</div></details>
+      <details><summary>Có phù hợp người lớn tuổi?</summary><div>Hương vị dịu, dùng được hằng ngày. Nếu có bệnh nền/đang dùng thuốc, nên hỏi ý kiến bác sĩ.</div></details>
+    </section>
+
+    <section id="lien-he">
+      <h2>Nhận tư vấn / Đặt hàng</h2>
+      <div class="grid">
+        <div class="card">
+          <p>📱 Zalo: <a href="https://zalo.me/0900000000" target="_blank" rel="noopener">0900 000 000</a><br>
+             📞 Điện thoại: <a href="tel:0900000000">0900 000 000</a><br>
+             ✉️ Email: <a href="mailto:contact@thaomocan.com">contact@thaomocan.com</a></p>
+          <p style="font-size:14px;color:var(--muted)">Điền form để chúng tôi gọi lại trong giờ làm việc.</p>
+          <form action="https://formspree.io/f/your-id" method="POST">
+            <input name="name" required placeholder="Họ tên" style="width:100%;padding:12px;border:1px solid var(--ring);border-radius:10px;margin:6px 0">
+            <input name="phone" required placeholder="Số điện thoại" style="width:100%;padding:12px;border:1px solid var(--ring);border-radius:10px;margin:6px 0">
+            <textarea name="note" rows="3" placeholder="Nhu cầu của bạn..." style="width:100%;padding:12px;border:1px solid var(--ring);border-radius:10px;margin:6px 0"></textarea>
+            <button class="cta" style="width:100%">Gửi thông tin</button>
+          </form>
+          <p style="font-size:12px;color:var(--muted)">* Thay <code>your-id</code> bằng mã Formspree của bạn để nhận email.</p>
+        </div>
+        <div class="card">
+          <h3>Thông tin doanh nghiệp</h3>
+          <p><strong>Trà thảo mộc An Nhiên</strong><br>Đ/c: (cập nhật)<br>MST/ĐKKD: (nếu có)</p>
+          <p style="font-size:14px;color:var(--muted)">Ghi chú pháp lý: Website giới thiệu sản phẩm thảo mộc, không thay thế thuốc chữa bệnh.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> Trà thảo mộc An Nhiên – Thaomocan.com</div>
+  </footer>
+
+  <!-- Nút nổi Zalo/Call -->
+  <div class="fab">
+    <a href="https://zalo.me/0900000000" target="_blank" rel="noopener">💬 Zalo</a>
+    <a href="tel:0900000000">📞 Gọi ngay</a>
+  </div>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
